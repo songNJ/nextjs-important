@@ -29,6 +29,11 @@ app.get('/set-header', (req, res) => {
   res.send('Headers have been set!');
 });
 
+app.get('/404', (req, res) => {
+  res.status(404)
+  res.send('404 test');
+});
+
 // 重定向
 app.get('/redirect', (req, res) => {
   res.redirect(302, '/api/express/set-header'); // 302 临时重定向到 /set-header
